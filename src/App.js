@@ -1,7 +1,15 @@
 import React from 'react';
+import { Layout } from 'antd';
+import 'antd/dist/antd.css';
+
+import Sider from './components/Sider/Sider';
 
 const App = () => {
-  return <div className="App">App</div>;
+  return (
+    <Layout>
+      <Sider />
+    </Layout>
+  );
 };
 
 export default App;
