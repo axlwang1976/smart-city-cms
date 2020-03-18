@@ -1,6 +1,5 @@
 import React from 'react';
 import { Layout, Typography } from 'antd';
-import 'antd/dist/antd.css';
 
 import PageContent from '../../components/PageContent/PageContent';
 import Footer from '../../components/Footer/Footer';

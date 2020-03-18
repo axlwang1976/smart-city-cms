@@ -1,7 +1,6 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
 import { Layout, Typography, Button } from 'antd';
-import 'antd/dist/antd.css';
 
 import PageContent from '../../components/PageContent/PageContent';
 import Footer from '../../components/Footer/Footer';

@@ -6,7 +6,6 @@ import {
   FileImageOutlined,
   NotificationOutlined
 } from '@ant-design/icons';
-import 'antd/dist/antd.css';
 
 import styles from './MainMenu.module.scss';
 

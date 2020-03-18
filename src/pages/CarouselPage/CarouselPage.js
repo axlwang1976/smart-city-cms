@@ -5,7 +5,6 @@ import { DndProvider } from 'react-dnd';
 import HTML5Backend from 'react-dnd-html5-backend';
 import update from 'immutability-helper';
 import Axios from 'axios';
-import 'antd/dist/antd.css';
 
 import PageContent from '../../components/PageContent/PageContent';
 import Footer from '../../components/Footer/Footer';
