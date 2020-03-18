@@ -5,9 +5,9 @@ import 'antd/dist/antd.css';
 
 import Sider from './components/Sider/Sider';
 import HomePage from './pages/HomePage/HomePage';
-import CarouselPage from './pages/CarouselPage/CarouselPage';
-import AnnouncementPage from './pages/AnnouncementPage/AnnouncementPage';
-import CarouselNewPage from './pages/CarouselNewPage/CarouselNewPage';
+import CarouselPage from './pages/Carousel/CarouselPage';
+import CarouselNewPage from './pages/Carousel/CarouselNewPage';
+import AnnouncementPage from './pages/Announcement/AnnouncementPage';
 
 const App = () => {
   return (
