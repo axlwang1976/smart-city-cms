@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import { Layout, Typography, Button, Table } from 'antd';
 import { DndProvider } from 'react-dnd';
 import HTML5Backend from 'react-dnd-html5-backend';
 import update from 'immutability-helper';
+import Axios from 'axios';
 import 'antd/dist/antd.css';
 
 import PageContent from '../../components/PageContent/PageContent';
@@ -37,35 +39,27 @@ const columns = [
     key: 'endDate'
   },
   {
-    title: '狀態',
-    dataIndex: 'isActive',
-    key: 'isActive'
-  },
-  {
     title: '動作',
     key: 'action',
-    render: (text, record) => <ActionButton />
+    render: (text, record) => <ActionButton record={record} source="medias" />
   }
 ];
 
 class CarouselPage extends Component {
   state = {
-    data: [
-      { key: '1', title: 'test1' },
-      { key: '2', title: 'test2' },
-      { key: '3', title: 'test3' }
-    ]
+    data: []
   };
+
+  async componentDidMount() {
+    const res = await Axios.get('http://localhost:5000/medias');
+    this.setState({ data: res.data });
+  }
 
   components = {
     body: {
       row: DragableBodyRow
     }
   };
-
-  componentDidUpdate() {
-    console.log(this.state.data);
-  }
 
   moveRow = (dragIndex, hoverIndex) => {
     const { data } = this.state;
@@ -92,14 +86,16 @@ class CarouselPage extends Component {
       <Content style={{ padding: '20px' }}>
         <Title level={2}>首頁輪播管理</Title>
         <PageContent>
-          <Button
-            type="primary"
-            shape="round"
-            size="large"
-            style={{ marginBottom: '40px' }}
-          >
-            新增輪播內容
-          </Button>
+          <Link to="/carousel/new">
+            <Button
+              type="primary"
+              shape="round"
+              size="large"
+              style={{ marginBottom: '40px' }}
+            >
+              新增輪播內容
+            </Button>
+          </Link>
           <DndProvider backend={HTML5Backend}>
             <Table
               columns={columns}

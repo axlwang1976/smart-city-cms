@@ -7,6 +7,7 @@ import Sider from './components/Sider/Sider';
 import HomePage from './pages/HomePage/HomePage';
 import CarouselPage from './pages/CarouselPage/CarouselPage';
 import AnnouncementPage from './pages/AnnouncementPage/AnnouncementPage';
+import CarouselNewPage from './pages/CarouselNewPage/CarouselNewPage';
 
 const App = () => {
   return (
@@ -16,6 +17,7 @@ const App = () => {
         <Route exact path="/" component={HomePage} />
         <Route exact path="/carousel" component={CarouselPage} />
         <Route exact path="/announcement" component={AnnouncementPage} />
+        <Route exact path="/carousel/new" component={CarouselNewPage} />
       </Switch>
     </Layout>
   );

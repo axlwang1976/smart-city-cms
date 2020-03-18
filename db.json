@@ -1,19 +1,37 @@
 {
-  "posts": [
+  "medias": [
     {
-      "id": 1,
-      "title": "json-server",
-      "author": "typicode"
-    }
-  ],
-  "comments": [
+      "id": "1",
+      "key": "1",
+      "title": "test1",
+      "type": "圖片",
+      "duration": 10,
+      "startDate": "2020-Mar-18 09:00:00",
+      "endDate": "2020-Mar-18 18:00:00",
+      "isActive": true,
+      "createdAt": "2020-Mar-18 09:00:00"
+    },
     {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
+      "id": "2",
+      "key": "2",
+      "title": "test2",
+      "type": "圖片",
+      "duration": 10,
+      "startDate": "2020-Mar-18 09:00:00",
+      "endDate": "2020-Mar-18 18:00:00",
+      "isActive": true,
+      "createdAt": "2020-Mar-18 09:00:00"
+    },
+    {
+      "id": "3",
+      "key": "3",
+      "title": "test3",
+      "type": "影片",
+      "duration": 10,
+      "startDate": "2020-Mar-18 09:00:00",
+      "endDate": "2020-Mar-18 18:00:00",
+      "isActive": true,
+      "createdAt": "2020-Mar-18 09:00:00"
     }
-  ],
-  "profile": {
-    "name": "typicode"
-  }
+  ]
 }
