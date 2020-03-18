@@ -7,12 +7,13 @@ import PageContent from '../../components/PageContent/PageContent';
 import Footer from '../../components/Footer/Footer';
 
 const HomePage = ({ history }) => {
+  const { Content } = Layout;
   const { Title } = Typography;
 
   const clickHandler = path => history.push(`/${path}`);
 
   return (
-    <Layout.Content style={{ padding: '20px' }}>
+    <Content style={{ padding: '20px' }}>
       <Title level={2}>首頁</Title>
       <PageContent>
         <Title level={3} style={{ textAlign: 'center' }} underline>
@@ -44,7 +45,7 @@ const HomePage = ({ history }) => {
         </Title>
       </PageContent>
       <Footer />
-    </Layout.Content>
+    </Content>
   );
 };
 

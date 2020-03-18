@@ -8,7 +8,10 @@
     "@testing-library/user-event": "^7.2.1",
     "antd": "^4.0.3",
     "axios": "^0.19.2",
+    "immutability-helper": "^3.0.1",
     "react": "^16.13.0",
+    "react-dnd": "^10.0.2",
+    "react-dnd-html5-backend": "^10.0.2",
     "react-dom": "^16.13.0",
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.4.0"
@@ -17,7 +20,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "json-server": "json-server --watch db.json --port 5000",
+    "dev": "concurrently \"npm start\" \"npm run json-server\""
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -35,6 +40,8 @@
     ]
   },
   "devDependencies": {
+    "concurrently": "^5.1.0",
+    "json-server": "^0.16.1",
     "node-sass": "^4.13.1"
   }
 }
