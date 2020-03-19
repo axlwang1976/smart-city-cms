@@ -16,8 +16,8 @@ const App = () => {
       <Switch>
         <Route exact path="/" component={HomePage} />
         <Route exact path="/carousel" component={CarouselPage} />
-        <Route exact path="/announcement" component={AnnouncementPage} />
         <Route exact path="/carousel/new" component={CarouselNewPage} />
+        <Route exact path="/announcement" component={AnnouncementPage} />
       </Switch>
     </Layout>
   );
