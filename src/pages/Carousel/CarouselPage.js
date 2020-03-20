@@ -4,7 +4,7 @@ import { Layout, Typography, Button, Table } from 'antd';
 import { DndProvider } from 'react-dnd';
 import HTML5Backend from 'react-dnd-html5-backend';
 import update from 'immutability-helper';
-import Axios from 'axios';
+import axios from 'axios';
 
 import PageContent from '../../components/PageContent/PageContent';
 import Footer from '../../components/Footer/Footer';
@@ -50,7 +50,7 @@ class CarouselPage extends Component {
   };
 
   async componentDidMount() {
-    const res = await Axios.get('http://localhost:5000/medias');
+    const res = await axios.get('http://localhost:5000/medias');
     this.setState({ data: res.data });
   }
 

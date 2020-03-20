@@ -1,11 +1,11 @@
 import React from 'react';
 import { Button } from 'antd';
-import Axios from 'axios';
+import axios from 'axios';
 import { withRouter } from 'react-router-dom';
 
 const ActionButton = ({ record, source, history }) => {
   const deleteHandler = async () => {
-    await Axios.delete(`http://localhost:5000/${source}/${record.id}`);
+    await axios.delete(`http://localhost:5000/${source}/${record.id}`);
     alert('刪除成功');
     window.location.reload(true);
   };

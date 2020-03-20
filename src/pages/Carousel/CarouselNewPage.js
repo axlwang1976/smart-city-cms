@@ -13,7 +13,7 @@ import {
 import { UploadOutlined } from '@ant-design/icons';
 import { v4 as uuidv4 } from 'uuid';
 import moment from 'moment';
-import Axios from 'axios';
+import axios from 'axios';
 import { withRouter } from 'react-router-dom';
 
 import PageContent from '../../components/PageContent/PageContent';
@@ -71,7 +71,7 @@ const CarouselNewPage = ({ history }) => {
       isAvtice: true,
       createdAt
     };
-    await Axios.post('http://localhost:5000/medias', newData);
+    await axios.post('http://localhost:5000/medias', newData);
     setIsloading(false);
     history.push('/carousel');
   };

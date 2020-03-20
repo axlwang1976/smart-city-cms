@@ -9,7 +9,7 @@ import {
   message,
   InputNumber
 } from 'antd';
-import Axios from 'axios';
+import axios from 'axios';
 import { withRouter } from 'react-router-dom';
 
 import PageContent from '../../components/PageContent/PageContent';
@@ -28,7 +28,7 @@ const CarouselEditPage = ({ history, match }) => {
 
   useEffect(() => {
     async function getData() {
-      const res = await Axios.get(
+      const res = await axios.get(
         `http://localhost:5000/medias/${match.params.id}`
       );
       setData(res.data);
@@ -46,7 +46,7 @@ const CarouselEditPage = ({ history, match }) => {
         : data.startDate,
       endDate: endDate ? endDate.format('YYYY-MM-DD HH:mm:ss') : data.endDate
     };
-    await Axios.patch(
+    await axios.patch(
       `http://localhost:5000/medias/${match.params.id}`,
       updatedData
     );
