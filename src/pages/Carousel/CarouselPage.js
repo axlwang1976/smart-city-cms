@@ -50,8 +50,13 @@ class CarouselPage extends Component {
   };
 
   async componentDidMount() {
-    const res = await axios.get('http://localhost:5000/medias');
-    this.setState({ data: res.data });
+    const res = await axios.get('http://localhost:5000/medias/carousel');
+    this.setState({ data: res.data.data });
+  }
+
+  async componentDidUpdate() {
+    const { data } = this.state;
+    await axios.patch('http://localhost:5000/medias/carousel', { data });
   }
 
   components = {
