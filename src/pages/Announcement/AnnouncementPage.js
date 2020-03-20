@@ -1,21 +1,34 @@
-import React from 'react';
-import { Layout, Typography } from 'antd';
-import 'antd/dist/antd.css';
+import React, { Component } from 'react';
+import { Layout, Typography, Button } from 'antd';
+import { Link } from 'react-router-dom';
 
 import PageContent from '../../components/PageContent/PageContent';
 import Footer from '../../components/Footer/Footer';
 
-const AnnouncementPage = () => {
-  const { Content } = Layout;
-  const { Title } = Typography;
+class AnnouncementPage extends Component {
+  render() {
+    const { Content } = Layout;
+    const { Title } = Typography;
 
-  return (
-    <Content style={{ padding: '20px' }}>
-      <Title level={2}>公告管理</Title>
-      <PageContent>公告管理內容</PageContent>
-      <Footer />
-    </Content>
-  );
-};
+    return (
+      <Content style={{ padding: '20px' }}>
+        <Title level={2}>公告管理</Title>
+        <PageContent>
+          <Link to="/carousel/new">
+            <Button
+              type="primary"
+              shape="round"
+              size="large"
+              style={{ marginBottom: '40px' }}
+            >
+              新增公告
+            </Button>
+          </Link>
+        </PageContent>
+        <Footer />
+      </Content>
+    );
+  }
+}
 
 export default AnnouncementPage;

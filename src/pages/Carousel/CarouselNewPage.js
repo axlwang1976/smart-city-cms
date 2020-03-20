@@ -36,6 +36,27 @@ const CarouselNewPage = ({ history }) => {
       authorization: 'authorization-text'
     },
     onChange(info) {
+      if (
+        info.file.size > 1048576 &&
+        info.file.type.split('/')[0] === 'image'
+      ) {
+        message.error('檔案過大，請重新選擇');
+        return false;
+      }
+      if (
+        info.file.size > 524288000 &&
+        info.file.type.split('/')[0] === 'video'
+      ) {
+        message.error('檔案過大，請重新選擇');
+        return false;
+      }
+      if (
+        info.file.type.split('/')[0] !== 'video' ||
+        info.file.type.split('/')[0] !== 'image'
+      ) {
+        message.error('不支援此類型檔案，請重新選擇');
+        return false;
+      }
       let fileList = [...info.fileList];
       fileList = fileList.slice(-1);
       setFileList(fileList);
