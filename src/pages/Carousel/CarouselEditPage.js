@@ -28,10 +28,9 @@ const CarouselEditPage = ({ history, match }) => {
 
   useEffect(() => {
     async function getData() {
-      const res = await axios.get(
-        `http://localhost:5000/medias/${match.params.id}`
-      );
-      setData(res.data);
+      const res = await axios.get(`http://localhost:5000/medias/carousel`);
+      const data = res.data.data.filter(el => el.id === match.params.id)[0];
+      setData(data);
     }
     getData();
   }, []);

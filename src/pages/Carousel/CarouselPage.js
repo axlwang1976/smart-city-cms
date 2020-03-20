@@ -40,7 +40,9 @@ const columns = [
   {
     title: '動作',
     key: 'action',
-    render: (text, record) => <ActionButton record={record} source="medias" />
+    render: (text, record) => (
+      <ActionButton record={record} resource="medias" type="carousel" />
+    )
   }
 ];
 

@@ -14,7 +14,7 @@ class AnnouncementPage extends Component {
       <Content style={{ padding: '20px' }}>
         <Title level={2}>公告管理</Title>
         <PageContent>
-          <Link to="/carousel/new">
+          <Link to="/announcement/new">
             <Button
               type="primary"
               shape="round"

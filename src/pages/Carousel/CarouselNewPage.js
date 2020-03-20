@@ -43,6 +43,7 @@ const CarouselNewPage = ({ history }) => {
         message.error('檔案過大，請重新選擇');
         return false;
       }
+
       if (
         info.file.size > 524288000 &&
         info.file.type.split('/')[0] === 'video'
@@ -50,6 +51,7 @@ const CarouselNewPage = ({ history }) => {
         message.error('檔案過大，請重新選擇');
         return false;
       }
+
       if (
         info.file.type.split('/')[0] !== 'video' ||
         info.file.type.split('/')[0] !== 'image'
@@ -57,6 +59,7 @@ const CarouselNewPage = ({ history }) => {
         message.error('不支援此類型檔案，請重新選擇');
         return false;
       }
+
       let fileList = [...info.fileList];
       fileList = fileList.slice(-1);
       setFileList(fileList);
