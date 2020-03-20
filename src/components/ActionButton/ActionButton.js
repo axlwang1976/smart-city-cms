@@ -3,19 +3,19 @@ import { Button } from 'antd';
 import axios from 'axios';
 import { withRouter } from 'react-router-dom';
 
-const ActionButton = ({ record, resource, history, type }) => {
+const ActionButton = ({ record, history, type }) => {
   const deleteHandler = async () => {
-    const res = await axios.get(`http://localhost:5000/${resource}/${type}`);
+    const res = await axios.get(`http://localhost:5000/contents/${type}`);
     const updatedData = res.data.data.filter(el => el.id !== record.id);
     console.log(updatedData);
-    await axios.patch('http://localhost:5000/medias/carousel', {
+    await axios.patch(`http://localhost:5000/contents/${type}`, {
       data: updatedData
     });
     window.location.reload(true);
   };
 
   const editHandler = () => {
-    history.push(`/carousel/${record.id}`);
+    history.push(`/${type}/${record.id}`);
   };
 
   return (

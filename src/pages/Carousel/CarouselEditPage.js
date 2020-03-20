@@ -18,6 +18,7 @@ import FormButton from '../../components/FormButton/FormButton';
 
 const CarouselEditPage = ({ history, match }) => {
   const [isLoading, setIsloading] = useState(false);
+  const [dataArr, setDataArr] = useState([]);
   const [data, setData] = useState(null);
   const { Content } = Layout;
   const { Title } = Typography;
@@ -28,8 +29,10 @@ const CarouselEditPage = ({ history, match }) => {
 
   useEffect(() => {
     async function getData() {
-      const res = await axios.get(`http://localhost:5000/medias/carousel`);
-      const data = res.data.data.filter(el => el.id === match.params.id)[0];
+      const res = await axios.get(`http://localhost:5000/contents/carousel`);
+      const dataArr = res.data.data;
+      const data = dataArr.filter(el => el.id === match.params.id)[0];
+      setDataArr(dataArr);
       setData(data);
     }
     getData();
@@ -38,17 +41,27 @@ const CarouselEditPage = ({ history, match }) => {
   const submitHandler = async ({ title, startDate, endDate, duration }) => {
     setIsloading(true);
     const updatedData = {
+      id: data.id,
+      key: data.key,
       title,
+      type: data.type,
       duration,
       startDate: startDate
         ? startDate.format('YYYY-MM-DD HH:mm:ss')
         : data.startDate,
-      endDate: endDate ? endDate.format('YYYY-MM-DD HH:mm:ss') : data.endDate
+      endDate: endDate ? endDate.format('YYYY-MM-DD HH:mm:ss') : data.endDate,
+      isActive: data.isActive,
+      createdAt: data.createdAt
     };
-    await axios.patch(
-      `http://localhost:5000/medias/${match.params.id}`,
-      updatedData
-    );
+    const updatedDataArr = dataArr.map(el => {
+      if (el.id !== match.params.id) {
+        return el;
+      }
+      return updatedData;
+    });
+    await axios.patch(`http://localhost:5000/contents/carousel`, {
+      data: updatedDataArr
+    });
     setIsloading(false);
     history.push('/carousel');
   };

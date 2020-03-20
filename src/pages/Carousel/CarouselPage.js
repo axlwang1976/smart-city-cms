@@ -40,9 +40,7 @@ const columns = [
   {
     title: '動作',
     key: 'action',
-    render: (text, record) => (
-      <ActionButton record={record} resource="medias" type="carousel" />
-    )
+    render: (text, record) => <ActionButton record={record} type="carousel" />
   }
 ];
 
@@ -52,13 +50,13 @@ class CarouselPage extends Component {
   };
 
   async componentDidMount() {
-    const res = await axios.get('http://localhost:5000/medias/carousel');
+    const res = await axios.get('http://localhost:5000/contents/carousel');
     this.setState({ data: res.data.data });
   }
 
   async componentDidUpdate() {
     const { data } = this.state;
-    await axios.patch('http://localhost:5000/medias/carousel', { data });
+    await axios.patch('http://localhost:5000/contents/carousel', { data });
   }
 
   components = {

@@ -1,5 +1,5 @@
 {
-  "medias": [
+  "contents": [
     {
       "id": "carousel",
       "data": [
@@ -8,7 +8,7 @@
           "key": "1",
           "title": "test1",
           "type": "圖片",
-          "duration": 10,
+          "duration": 11,
           "startDate": "2020-Mar-18 09:00:00",
           "endDate": "2020-Mar-18 18:00:00",
           "isActive": true,
