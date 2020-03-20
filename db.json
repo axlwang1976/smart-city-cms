@@ -34,15 +34,16 @@
       "createdAt": "2020-Mar-18 09:00:00"
     },
     {
-      "id": "627399de-5357-4cd7-8e51-9bb4bd64c38c",
-      "key": "627399de-5357-4cd7-8e51-9bb4bd64c38c",
-      "title": "test",
+      "id": "2c79d7da-8a5b-4bfa-8654-e83ea61f3cd4",
+      "key": "2c79d7da-8a5b-4bfa-8654-e83ea61f3cd4",
+      "title": "test1",
       "type": "圖片",
-      "duration": 123,
-      "startDate": "2020-03-19 14:20:36",
-      "endDate": "2020-03-19 14:20:38",
+      "file": "UI-V1_200319_0006.jpg",
+      "duration": 10,
+      "startDate": "2020-03-20 09:26:56",
+      "endDate": "2020-03-20 09:26:58",
       "isAvtice": true,
-      "createdAt": "2020-03-19 14:20:44"
+      "createdAt": "2020-03-20 09:27:07"
     }
   ]
 }

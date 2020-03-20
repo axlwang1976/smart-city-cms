@@ -64,6 +64,7 @@ const CarouselNewPage = ({ history }) => {
       key: id,
       title,
       type,
+      file: file.file.name,
       duration,
       startDate: startDate.format('YYYY-MM-DD HH:mm:ss'),
       endDate: endDate.format('YYYY-MM-DD HH:mm:ss'),
