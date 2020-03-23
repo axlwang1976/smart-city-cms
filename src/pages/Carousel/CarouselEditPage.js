@@ -40,6 +40,7 @@ const CarouselEditPage = ({ history, match }) => {
 
   const submitHandler = async ({ title, startDate, endDate, duration }) => {
     setIsloading(true);
+    console.log(data);
     const updatedData = {
       id: data.id,
       key: data.key,

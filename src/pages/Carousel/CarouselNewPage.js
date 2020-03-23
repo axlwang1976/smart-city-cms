@@ -53,7 +53,7 @@ const CarouselNewPage = ({ history }) => {
       }
 
       if (
-        info.file.type.split('/')[0] !== 'video' ||
+        info.file.type.split('/')[0] !== 'video' &&
         info.file.type.split('/')[0] !== 'image'
       ) {
         message.error('不支援此類型檔案，請重新選擇');
@@ -80,6 +80,7 @@ const CarouselNewPage = ({ history }) => {
     duration
   }) => {
     setIsloading(true);
+
     const type = file.file.type.split('/')[0] === 'image' ? '圖片' : '影片';
     const createdAt = moment().format('YYYY-MM-DD HH:mm:ss');
     const id = uuidv4();
@@ -92,11 +93,19 @@ const CarouselNewPage = ({ history }) => {
       duration,
       startDate: startDate.format('YYYY-MM-DD HH:mm:ss'),
       endDate: endDate.format('YYYY-MM-DD HH:mm:ss'),
-      isAvtice: true,
+      isActive: true,
       createdAt
     };
-    await axios.post('http://localhost:5000/medias', newData);
+    const res = await axios.get('http://localhost:5000/contents/carousel');
+    const data = res.data.data;
+    const newDataArr = [...data, newData];
+
+    await axios.patch('http://localhost:5000/contents/carousel', {
+      data: newDataArr
+    });
+
     setIsloading(false);
+
     history.push('/carousel');
   };
 
