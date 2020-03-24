@@ -84,6 +84,8 @@ const CarouselNewPage = ({ history }) => {
     const type = file.file.type.split('/')[0] === 'image' ? '圖片' : '影片';
     const createdAt = moment().format('YYYY-MM-DD HH:mm:ss');
     const id = uuidv4();
+    const res = await axios.get('http://localhost:5000/contents/carousel');
+    const data = res.data.data;
     const newData = {
       id,
       key: id,
@@ -96,8 +98,6 @@ const CarouselNewPage = ({ history }) => {
       isActive: true,
       createdAt
     };
-    const res = await axios.get('http://localhost:5000/contents/carousel');
-    const data = res.data.data;
     const newDataArr = [...data, newData];
 
     await axios.patch('http://localhost:5000/contents/carousel', {

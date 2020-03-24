@@ -5,6 +5,7 @@ import { DndProvider } from 'react-dnd';
 import HTML5Backend from 'react-dnd-html5-backend';
 import update from 'immutability-helper';
 import axios from 'axios';
+import moment from 'moment';
 
 import PageContent from '../../components/PageContent/PageContent';
 import Footer from '../../components/Footer/Footer';
@@ -51,12 +52,19 @@ class CarouselPage extends Component {
 
   async componentDidMount() {
     const res = await axios.get('http://localhost:5000/contents/carousel');
-    this.setState({ data: res.data.data });
+    this.setState({
+      data: res.data.data.sort(
+        (a, b) => moment(b.createdAt).valueOf() - moment(a.createdAt).valueOf()
+      )
+    });
   }
 
   async componentDidUpdate() {
     const { data } = this.state;
-    await axios.patch('http://localhost:5000/contents/carousel', { data });
+    const playlist = data.map((el, i) => ({ ...el, playIndex: i }));
+    await axios.patch('http://localhost:5000/contents/playlistCarousel', {
+      data: playlist
+    });
   }
 
   components = {
