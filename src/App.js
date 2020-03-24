@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Layout } from 'antd';
 import { Switch, Route, Redirect } from 'react-router-dom';
 import 'antd/dist/antd.css';
@@ -11,9 +11,12 @@ import CarouselEditPage from './pages/Carousel/CarouselEditPage';
 import AnnouncementPage from './pages/Announcement/AnnouncementPage';
 import AnnouncementNewPage from './pages/Announcement/AnnouncementNewPage';
 import AnnouncementEditPage from './pages/Announcement/AnnouncementEditPage';
+import LogInPage from './pages/LogIn/LogInPage';
 
 const App = () => {
-  return (
+  const [isLogedIn, setIsLogedIn] = useState(true);
+
+  return isLogedIn ? (
     <Layout>
       <Sider />
       <Switch>
@@ -27,6 +30,8 @@ const App = () => {
         <Redirect to="/" />
       </Switch>
     </Layout>
+  ) : (
+    <LogInPage setIsLogedIn={setIsLogedIn} />
   );
 };
 

@@ -4,71 +4,17 @@
       "id": "carousel",
       "data": [
         {
-          "id": "7986e361-5359-4c48-86c6-51dcafd57098",
-          "key": "7986e361-5359-4c48-86c6-51dcafd57098",
-          "title": "test3",
+          "id": "c119a33f-07a0-41d7-a68a-7427c541a889",
+          "key": "c119a33f-07a0-41d7-a68a-7427c541a889",
+          "title": "test4",
           "type": "圖片",
           "file": "UI-V1_200319_0006.jpg",
           "duration": 1,
-          "startDate": "2020-03-24 09:53:23",
-          "endDate": "2020-03-24 09:53:25",
+          "startDate": "2020-03-24 13:31:58",
+          "endDate": "2020-03-24 13:32:01",
           "isActive": true,
-          "createdAt": "2020-03-24 09:53:36"
-        },
-        {
-          "id": "cd22f2b8-fa9a-4095-8600-8c7b301f6c04",
-          "key": "cd22f2b8-fa9a-4095-8600-8c7b301f6c04",
-          "title": "test2",
-          "type": "影片",
-          "file": "ApplicationConfig.json",
-          "duration": 1,
-          "startDate": "2020-03-23 17:40:03",
-          "endDate": "2020-03-23 17:40:06",
-          "isActive": true,
-          "createdAt": "2020-03-23 17:40:50"
-        },
-        {
-          "id": "655edff8-e9ae-44d0-9892-f2a29b024152",
-          "key": "655edff8-e9ae-44d0-9892-f2a29b024152",
-          "title": "test1",
-          "type": "圖片",
-          "file": "UI-V1_200319_0006.jpg",
-          "duration": 100,
-          "startDate": "2020-03-23 14:30:31",
-          "endDate": "2020-03-23 14:30:33",
-          "isActive": true,
-          "createdAt": "2020-03-23 14:30:58"
-        }
-      ]
-    },
-    {
-      "id": "playlistCarousel",
-      "data": [
-        {
-          "id": "7986e361-5359-4c48-86c6-51dcafd57098",
-          "key": "7986e361-5359-4c48-86c6-51dcafd57098",
-          "title": "test3",
-          "type": "圖片",
-          "file": "UI-V1_200319_0006.jpg",
-          "duration": 1,
-          "startDate": "2020-03-24 09:53:23",
-          "endDate": "2020-03-24 09:53:25",
-          "isActive": true,
-          "createdAt": "2020-03-24 09:53:36",
+          "createdAt": "2020-03-24 13:32:13",
           "playIndex": 0
-        },
-        {
-          "id": "cd22f2b8-fa9a-4095-8600-8c7b301f6c04",
-          "key": "cd22f2b8-fa9a-4095-8600-8c7b301f6c04",
-          "title": "test2",
-          "type": "影片",
-          "file": "ApplicationConfig.json",
-          "duration": 1,
-          "startDate": "2020-03-23 17:40:03",
-          "endDate": "2020-03-23 17:40:06",
-          "isActive": true,
-          "createdAt": "2020-03-23 17:40:50",
-          "playIndex": 1
         },
         {
           "id": "655edff8-e9ae-44d0-9892-f2a29b024152",
@@ -81,7 +27,33 @@
           "endDate": "2020-03-23 14:30:33",
           "isActive": true,
           "createdAt": "2020-03-23 14:30:58",
+          "playIndex": 1
+        },
+        {
+          "id": "cd22f2b8-fa9a-4095-8600-8c7b301f6c04",
+          "key": "cd22f2b8-fa9a-4095-8600-8c7b301f6c04",
+          "title": "test2",
+          "type": "影片",
+          "file": "ApplicationConfig.json",
+          "duration": 1,
+          "startDate": "2020-03-23 17:40:03",
+          "endDate": "2020-03-23 17:40:06",
+          "isActive": true,
+          "createdAt": "2020-03-23 17:40:50",
           "playIndex": 2
+        },
+        {
+          "id": "7986e361-5359-4c48-86c6-51dcafd57098",
+          "key": "7986e361-5359-4c48-86c6-51dcafd57098",
+          "title": "test3",
+          "type": "圖片",
+          "file": "UI-V1_200319_0006.jpg",
+          "duration": 1,
+          "startDate": "2020-03-24 09:53:23",
+          "endDate": "2020-03-24 09:53:25",
+          "isActive": true,
+          "createdAt": "2020-03-24 09:53:36",
+          "playIndex": 3
         }
       ]
     }

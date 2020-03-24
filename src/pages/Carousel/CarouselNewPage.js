@@ -96,7 +96,8 @@ const CarouselNewPage = ({ history }) => {
       startDate: startDate.format('YYYY-MM-DD HH:mm:ss'),
       endDate: endDate.format('YYYY-MM-DD HH:mm:ss'),
       isActive: true,
-      createdAt
+      createdAt,
+      playIndex: -99
     };
     const newDataArr = [...data, newData];
 
