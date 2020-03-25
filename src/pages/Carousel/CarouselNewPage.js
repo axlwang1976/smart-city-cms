@@ -111,7 +111,7 @@ const CarouselNewPage = ({ history }) => {
   };
 
   return (
-    <Content style={{ padding: '20px' }}>
+    <Content style={{ padding: '20px 20px 20px 220px', minHeight: '100vh' }}>
       <Title level={2}>新增首頁輪播內容</Title>
       <PageContent>
         <Form

@@ -4,19 +4,6 @@
       "id": "carousel",
       "data": [
         {
-          "id": "c119a33f-07a0-41d7-a68a-7427c541a889",
-          "key": "c119a33f-07a0-41d7-a68a-7427c541a889",
-          "title": "test4",
-          "type": "圖片",
-          "file": "UI-V1_200319_0006.jpg",
-          "duration": 1,
-          "startDate": "2020-03-24 13:31:58",
-          "endDate": "2020-03-24 13:32:01",
-          "isActive": true,
-          "createdAt": "2020-03-24 13:32:13",
-          "playIndex": 0
-        },
-        {
           "id": "655edff8-e9ae-44d0-9892-f2a29b024152",
           "key": "655edff8-e9ae-44d0-9892-f2a29b024152",
           "title": "test1",
@@ -27,7 +14,7 @@
           "endDate": "2020-03-23 14:30:33",
           "isActive": true,
           "createdAt": "2020-03-23 14:30:58",
-          "playIndex": 1
+          "playIndex": 0
         },
         {
           "id": "cd22f2b8-fa9a-4095-8600-8c7b301f6c04",
@@ -40,20 +27,110 @@
           "endDate": "2020-03-23 17:40:06",
           "isActive": true,
           "createdAt": "2020-03-23 17:40:50",
-          "playIndex": 2
+          "playIndex": 1
+        }
+      ]
+    },
+    {
+      "id": "announcement",
+      "data": [
+        {
+          "id": "a4c033d0-5352-4861-913d-10c7c1818e02",
+          "key": "a4c033d0-5352-4861-913d-10c7c1818e02",
+          "title": "test3",
+          "type": "生活快訊",
+          "startDate": "2020-03-25 13:55:48",
+          "endDate": "2020-03-25 13:55:50",
+          "isActive": true,
+          "createdAt": "2020-03-25 13:56:00",
+          "playIndex": 0,
+          "file": [
+            {
+              "uid": "rc-upload-1585115642836-5",
+              "lastModified": 1584583929853,
+              "lastModifiedDate": "2020-03-19T02:12:09.853Z",
+              "name": "UI-V1_200319_0006.jpg",
+              "size": 16095,
+              "type": "image/jpeg",
+              "percent": 100,
+              "originFileObj": {
+                "uid": "rc-upload-1585115642836-5"
+              },
+              "status": "done",
+              "response": {
+                "name": "xxx.png",
+                "status": "done",
+                "url": "https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png",
+                "thumbUrl": "https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png"
+              },
+              "xhr": {}
+            },
+            {
+              "uid": "rc-upload-1585115642836-7",
+              "lastModified": 1584583929853,
+              "lastModifiedDate": "2020-03-19T02:12:09.853Z",
+              "name": "UI-V1_200319_0006.jpg",
+              "size": 16095,
+              "type": "image/jpeg",
+              "percent": 100,
+              "originFileObj": {
+                "uid": "rc-upload-1585115642836-7"
+              },
+              "status": "done",
+              "response": {
+                "name": "xxx.png",
+                "status": "done",
+                "url": "https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png",
+                "thumbUrl": "https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png"
+              },
+              "xhr": {}
+            }
+          ]
         },
         {
-          "id": "7986e361-5359-4c48-86c6-51dcafd57098",
-          "key": "7986e361-5359-4c48-86c6-51dcafd57098",
-          "title": "test3",
-          "type": "圖片",
-          "file": "UI-V1_200319_0006.jpg",
-          "duration": 1,
-          "startDate": "2020-03-24 09:53:23",
-          "endDate": "2020-03-24 09:53:25",
+          "id": "c3629a69-2bbc-4173-ba97-60af75b4f058",
+          "key": "c3629a69-2bbc-4173-ba97-60af75b4f058",
+          "title": "test",
+          "type": "活動通知",
+          "startDate": "2020-03-25 13:54:45",
+          "endDate": "2020-03-25 13:54:47",
           "isActive": true,
-          "createdAt": "2020-03-24 09:53:36",
-          "playIndex": 3
+          "createdAt": "2020-03-25 13:54:57",
+          "playIndex": 1,
+          "file": [
+            {
+              "uid": "rc-upload-1585115642836-2",
+              "lastModified": 1584583929853,
+              "lastModifiedDate": "2020-03-19T02:12:09.853Z",
+              "name": "UI-V1_200319_0006.jpg",
+              "size": 16095,
+              "type": "image/jpeg",
+              "percent": 100,
+              "originFileObj": {
+                "uid": "rc-upload-1585115642836-2"
+              },
+              "status": "done",
+              "response": {
+                "name": "xxx.png",
+                "status": "done",
+                "url": "https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png",
+                "thumbUrl": "https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png"
+              },
+              "xhr": {}
+            }
+          ]
+        },
+        {
+          "id": "1ba416f7-1d55-4d80-bc3b-579cfe213554",
+          "key": "1ba416f7-1d55-4d80-bc3b-579cfe213554",
+          "title": "test1",
+          "type": "社區公告",
+          "startDate": "2020-03-24 17:47:06",
+          "endDate": "2020-03-24 17:47:09",
+          "isActive": true,
+          "createdAt": "2020-03-24 17:47:13",
+          "playIndex": 2,
+          "detailText": "11111"
         }
       ]
     }

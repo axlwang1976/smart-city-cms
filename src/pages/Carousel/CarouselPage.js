@@ -1,10 +1,8 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { Layout, Typography, Button, Table } from 'antd';
-import { DndProvider } from 'react-dnd';
-import HTML5Backend from 'react-dnd-html5-backend';
-import update from 'immutability-helper';
 import axios from 'axios';
+import update from 'immutability-helper';
 
 import PageContent from '../../components/PageContent/PageContent';
 import Footer from '../../components/Footer/Footer';
@@ -92,7 +90,7 @@ class CarouselPage extends Component {
     const { data } = this.state;
 
     return (
-      <Content style={{ padding: '20px' }}>
+      <Content style={{ padding: '20px 20px 20px 220px', minHeight: '100vh' }}>
         <Title level={2}>首頁輪播管理</Title>
         <PageContent>
           <Link to="/carousel/new">
@@ -105,15 +103,13 @@ class CarouselPage extends Component {
               新增輪播內容
             </Button>
           </Link>
-          <DndProvider backend={HTML5Backend}>
-            <Table
-              columns={columns}
-              dataSource={data}
-              components={this.components}
-              onRow={(record, index) => ({ index, moveRow: this.moveRow })}
-              pagination={{ hideOnSinglePage: true, pageSize: 20 }}
-            />
-          </DndProvider>
+          <Table
+            columns={columns}
+            dataSource={data}
+            components={this.components}
+            onRow={(record, index) => ({ index, moveRow: this.moveRow })}
+            pagination={{ hideOnSinglePage: true, pageSize: 20 }}
+          />
         </PageContent>
         <Footer />
       </Content>

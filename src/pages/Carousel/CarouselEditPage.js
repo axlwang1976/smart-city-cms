@@ -69,7 +69,7 @@ const CarouselEditPage = ({ history, match }) => {
 
   return (
     data && (
-      <Content style={{ padding: '20px' }}>
+      <Content style={{ padding: '20px 20px 20px 220px', minHeight: '100vh' }}>
         <Title level={2}>編輯首頁輪播內容</Title>
         <PageContent>
           <Form

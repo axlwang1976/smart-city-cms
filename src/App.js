@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { Layout } from 'antd';
 import { Switch, Route, Redirect } from 'react-router-dom';
+import { DndProvider } from 'react-dnd';
+import HTML5Backend from 'react-dnd-html5-backend';
 import 'antd/dist/antd.css';
 
 import Sider from './components/Sider/Sider';
@@ -17,19 +19,25 @@ const App = () => {
   const [isLogedIn, setIsLogedIn] = useState(true);
 
   return isLogedIn ? (
-    <Layout>
-      <Sider />
-      <Switch>
-        <Route exact path="/" component={HomePage} />
-        <Route exact path="/carousel" component={CarouselPage} />
-        <Route path="/carousel/new" component={CarouselNewPage} />
-        <Route path="/carousel/:id" component={CarouselEditPage} />
-        <Route exact path="/announcement" component={AnnouncementPage} />
-        <Route path="/announcement/new" component={AnnouncementNewPage} />
-        <Route path="/announcement/:id" component={AnnouncementEditPage} />
-        <Redirect to="/" />
-      </Switch>
-    </Layout>
+    <DndProvider backend={HTML5Backend}>
+      <Layout>
+        <Sider />
+        <Switch>
+          <Route exact path="/" component={HomePage} />
+          <Route exact path="/carousel" render={() => <CarouselPage />} />
+          <Route path="/carousel/new" component={CarouselNewPage} />
+          <Route path="/carousel/:id" component={CarouselEditPage} />
+          <Route
+            exact
+            path="/announcement"
+            render={() => <AnnouncementPage />}
+          />
+          <Route path="/announcement/new" component={AnnouncementNewPage} />
+          <Route path="/announcement/:id" component={AnnouncementEditPage} />
+          <Redirect to="/" />
+        </Switch>
+      </Layout>
+    </DndProvider>
   ) : (
     <LogInPage setIsLogedIn={setIsLogedIn} />
   );

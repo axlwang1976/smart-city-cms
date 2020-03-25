@@ -16,6 +16,12 @@ const Sider = () => {
       collapsible
       collapsed={collapsed}
       onCollapse={handleCollapse}
+      style={{
+        overflow: 'auto',
+        height: '100vh',
+        position: 'fixed',
+        left: 0
+      }}
     >
       <Logo />
       <MainMenu />
