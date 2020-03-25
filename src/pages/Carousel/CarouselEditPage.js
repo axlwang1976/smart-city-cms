@@ -52,7 +52,8 @@ const CarouselEditPage = ({ history, match }) => {
         : data.startDate,
       endDate: endDate ? endDate.format('YYYY-MM-DD HH:mm:ss') : data.endDate,
       isActive: data.isActive,
-      createdAt: data.createdAt
+      createdAt: data.createdAt,
+      playIndex: data.playIndex
     };
     const updatedDataArr = dataArr.map(el => {
       if (el.id !== match.params.id) {
