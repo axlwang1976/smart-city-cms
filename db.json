@@ -78,18 +78,6 @@
           "createdAt": "2020-03-25 13:54:57",
           "playIndex": 1,
           "detailText": "22222"
-        },
-        {
-          "id": "1ba416f7-1d55-4d80-bc3b-579cfe213554",
-          "key": "1ba416f7-1d55-4d80-bc3b-579cfe213554",
-          "title": "test1",
-          "type": "社區公告",
-          "startDate": "2020-03-24 17:47:06",
-          "endDate": "2020-03-24 17:47:09",
-          "isActive": true,
-          "createdAt": "2020-03-24 17:47:13",
-          "playIndex": 2,
-          "detailText": "11111"
         }
       ]
     }
