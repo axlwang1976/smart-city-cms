@@ -5,7 +5,7 @@ import Logo from '../Logo/Logo';
 import MainMenu from '../MainMenu/MainMenu';
 import styles from './Sider.module.scss';
 
-const Sider = () => {
+const Sider = ({ username }) => {
   const [collapsed, setCollapsed] = useState(false);
 
   const handleCollapse = isCollapsed => setCollapsed(isCollapsed);
@@ -24,7 +24,7 @@ const Sider = () => {
       }}
     >
       <Logo />
-      <MainMenu />
+      <MainMenu username={username} />
     </Layout.Sider>
   );
 };

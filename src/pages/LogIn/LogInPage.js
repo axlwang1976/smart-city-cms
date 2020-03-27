@@ -1,7 +1,7 @@
 import React from 'react';
 import { Form, Input, Button, message } from 'antd';
 
-const LogInPage = ({ setIsLogedIn }) => {
+const LogInPage = ({ setIsLogedIn, setUsername }) => {
   const layout = {
     labelCol: { span: 8 },
     wrapperCol: { span: 16 }
@@ -11,9 +11,13 @@ const LogInPage = ({ setIsLogedIn }) => {
     wrapperCol: { offset: 8, span: 16 }
   };
 
-  const onFinish = vals => {
-    if (vals.username === 'admin' && vals.password === 'admin') {
+  const onFinish = ({ username, password }) => {
+    if (username === 'admin' && password === 'admin') {
       setIsLogedIn(true);
+      setUsername(username);
+    } else if (username === 'user' && password === 'user') {
+      setIsLogedIn(true);
+      setUsername(username);
     } else {
       message.error('帳號或密碼錯誤');
       window.location.reload(true);

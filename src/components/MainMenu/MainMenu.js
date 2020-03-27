@@ -4,18 +4,14 @@ import { Menu } from 'antd';
 import {
   HomeOutlined,
   FileImageOutlined,
-  NotificationOutlined
+  NotificationOutlined,
+  SettingOutlined
 } from '@ant-design/icons';
 
 import styles from './MainMenu.module.scss';
 
-const MainMenu = () => (
-  <Menu
-    theme="dark"
-    mode="inline"
-    // openKeys={openKeys}
-    className={styles.menu}
-  >
+const MainMenu = ({ username }) => (
+  <Menu theme="dark" mode="inline" className={styles.menu}>
     <Menu.Item key="1">
       <NavLink to="/">
         <HomeOutlined />
@@ -34,6 +30,14 @@ const MainMenu = () => (
         <span>公告管理</span>
       </NavLink>
     </Menu.Item>
+    {username === 'admin' && (
+      <Menu.Item key="4">
+        <NavLink to="/setting">
+          <SettingOutlined />
+          <span>系統設定</span>
+        </NavLink>
+      </Menu.Item>
+    )}
   </Menu>
 );
 

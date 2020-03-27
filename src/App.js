@@ -14,17 +14,19 @@ import AnnouncementPage from './pages/Announcement/AnnouncementPage';
 import AnnouncementNewPage from './pages/Announcement/AnnouncementNewPage';
 import AnnouncementEditPage from './pages/Announcement/AnnouncementEditPage';
 import LogInPage from './pages/LogIn/LogInPage';
+import SettingPage from './pages/Setting/SettingPage';
 
 const App = () => {
   const [isLogedIn, setIsLogedIn] = useState(true);
+  const [username, setUsername] = useState('admin');
 
   return isLogedIn ? (
     <DndProvider backend={HTML5Backend}>
       <Layout>
-        <Sider />
+        <Sider username={username} />
         <Switch>
           <Route exact path="/" component={HomePage} />
-          <Route exact path="/carousel" render={() => <CarouselPage />} />
+          <Route exact path="/carousel" component={CarouselPage} />
           <Route path="/carousel/new" component={CarouselNewPage} />
           <Route path="/carousel/:id" component={CarouselEditPage} />
           <Route
@@ -34,12 +36,13 @@ const App = () => {
           />
           <Route path="/announcement/new" component={AnnouncementNewPage} />
           <Route path="/announcement/:id" component={AnnouncementEditPage} />
+          <Route exact path="/setting" component={SettingPage} />
           <Redirect to="/" />
         </Switch>
       </Layout>
     </DndProvider>
   ) : (
-    <LogInPage setIsLogedIn={setIsLogedIn} />
+    <LogInPage setIsLogedIn={setIsLogedIn} setUsername={setUsername} />
   );
 };
 

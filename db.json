@@ -15,19 +15,6 @@
           "isActive": true,
           "createdAt": "2020-03-23 14:30:58",
           "playIndex": 0
-        },
-        {
-          "id": "cd22f2b8-fa9a-4095-8600-8c7b301f6c04",
-          "key": "cd22f2b8-fa9a-4095-8600-8c7b301f6c04",
-          "title": "test2",
-          "type": "影片",
-          "file": "ApplicationConfig.json",
-          "duration": 1,
-          "startDate": "2020-03-23 17:40:03",
-          "endDate": "2020-03-23 17:40:06",
-          "isActive": true,
-          "createdAt": "2020-03-23 17:40:50",
-          "playIndex": 1
         }
       ]
     },
@@ -35,18 +22,18 @@
       "id": "announcement",
       "data": [
         {
-          "id": "a4c033d0-5352-4861-913d-10c7c1818e02",
-          "key": "a4c033d0-5352-4861-913d-10c7c1818e02",
-          "title": "test3",
-          "type": "生活快訊",
-          "startDate": "2020-03-25 13:55:48",
-          "endDate": "2020-03-25 13:55:50",
+          "id": "c3629a69-2bbc-4173-ba97-60af75b4f058",
+          "key": "c3629a69-2bbc-4173-ba97-60af75b4f058",
+          "title": "test1",
+          "type": "活動通知",
+          "startDate": "2020-03-25 13:54:45",
+          "endDate": "2020-03-25 13:54:47",
           "isActive": true,
-          "createdAt": "2020-03-25 13:56:00",
+          "createdAt": "2020-03-25 13:54:57",
           "playIndex": 0,
           "file": [
             {
-              "uid": "rc-upload-1585118787356-2",
+              "uid": "rc-upload-1585204150906-2",
               "lastModified": 1584583929853,
               "lastModifiedDate": "2020-03-19T02:12:09.853Z",
               "name": "UI-V1_200319_0006.jpg",
@@ -54,7 +41,7 @@
               "type": "image/jpeg",
               "percent": 100,
               "originFileObj": {
-                "uid": "rc-upload-1585118787356-2"
+                "uid": "rc-upload-1585204150906-2"
               },
               "status": "done",
               "response": {
@@ -65,18 +52,7 @@
               },
               "xhr": {}
             }
-          ]
-        },
-        {
-          "id": "c3629a69-2bbc-4173-ba97-60af75b4f058",
-          "key": "c3629a69-2bbc-4173-ba97-60af75b4f058",
-          "title": "test",
-          "type": "活動通知",
-          "startDate": "2020-03-25 13:54:45",
-          "endDate": "2020-03-25 13:54:47",
-          "isActive": true,
-          "createdAt": "2020-03-25 13:54:57",
-          "playIndex": 1,
+          ],
           "detailText": "22222"
         }
       ]
