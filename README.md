@@ -6,7 +6,7 @@
 
 - 前端<br>
   Create React App<br>
-  Ant Design
+  Ant Design<br>
   <br>
 - 後端<br>
   JSON Server
@@ -18,9 +18,9 @@
   一般使用者<br>
   <br>
 - 首頁輪播管理<br>
-  讀取、新增、編輯、刪除
+  讀取、新增、編輯、刪除<br>
   <br>
 - 公告管理<br>
-  讀取、新增、編輯、刪除
+  讀取、新增、編輯、刪除<br>
   <br>
 - 系統設定
