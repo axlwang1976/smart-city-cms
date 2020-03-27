@@ -43,7 +43,7 @@ const LogInPage = ({ setIsLogedIn, setUsername }) => {
         onFinishFailed={err => message.error('表單驗證錯誤，請重新確認')}
         style={{
           padding: '20px 20px 0 20px',
-          border: '1px solid #444',
+          border: '1px solid rgba(0, 0, 0, 0.85)',
           borderRadius: 5,
           backgroundColor: '#fff'
         }}
