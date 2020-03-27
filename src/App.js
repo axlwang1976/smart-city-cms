@@ -29,11 +29,7 @@ const App = () => {
           <Route exact path="/carousel" component={CarouselPage} />
           <Route path="/carousel/new" component={CarouselNewPage} />
           <Route path="/carousel/:id" component={CarouselEditPage} />
-          <Route
-            exact
-            path="/announcement"
-            render={() => <AnnouncementPage />}
-          />
+          <Route exact path="/announcement" component={AnnouncementPage} />
           <Route path="/announcement/new" component={AnnouncementNewPage} />
           <Route path="/announcement/:id" component={AnnouncementEditPage} />
           <Route exact path="/setting" component={SettingPage} />

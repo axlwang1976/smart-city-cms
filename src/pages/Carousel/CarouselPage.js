@@ -90,7 +90,7 @@ class CarouselPage extends Component {
     const { data } = this.state;
 
     return (
-      <Content style={{ padding: '20px 20px 20px 220px', minHeight: '100vh' }}>
+      <Content>
         <Title level={2}>首頁輪播管理</Title>
         <PageContent>
           <Link to="/carousel/new">

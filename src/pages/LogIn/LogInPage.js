@@ -31,7 +31,8 @@ const LogInPage = ({ setIsLogedIn, setUsername }) => {
         justifyContent: 'center',
         alignItems: 'center',
         width: '100%',
-        height: '100vh'
+        height: '100vh',
+        backgroundColor: 'rgba(0, 0, 0, 0.05)'
       }}
     >
       <Form
@@ -40,6 +41,12 @@ const LogInPage = ({ setIsLogedIn, setUsername }) => {
         initialValues={{ remember: true }}
         onFinish={onFinish}
         onFinishFailed={err => message.error('表單驗證錯誤，請重新確認')}
+        style={{
+          padding: '20px 20px 0 20px',
+          border: '1px solid #444',
+          borderRadius: 5,
+          backgroundColor: '#fff'
+        }}
       >
         <Form.Item
           label="帳號"
@@ -57,7 +64,7 @@ const LogInPage = ({ setIsLogedIn, setUsername }) => {
         </Form.Item>
         <Form.Item {...tailLayout}>
           <Button type="primary" htmlType="submit">
-            Submit
+            登入
           </Button>
         </Form.Item>
       </Form>

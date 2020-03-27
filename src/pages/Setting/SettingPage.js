@@ -10,7 +10,7 @@ const SettingPage = ({ history }) => {
   const { Title } = Typography;
 
   return (
-    <Content style={{ padding: '20px 20px 20px 220px', minHeight: '100vh' }}>
+    <Content>
       <Title level={2}>系統設定頁</Title>
       <PageContent>系統設定頁</PageContent>
       <Footer />

@@ -29,3 +29,8 @@ tr.drop-over-downward td {
 tr.drop-over-upward td {
   border-top: 2px dashed #1890ff !important;
 }
+
+main.ant-layout-content {
+  padding: 20px 20px 20px 220px;
+  min-height: 100vh;
+}

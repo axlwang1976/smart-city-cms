@@ -87,7 +87,7 @@ class AnnouncementPage extends Component {
     const { data } = this.state;
 
     return (
-      <Content style={{ padding: '20px 20px 20px 220px', minHeight: '100vh' }}>
+      <Content>
         <Title level={2}>公告管理</Title>
         <PageContent>
           <Link to="/announcement/new">
